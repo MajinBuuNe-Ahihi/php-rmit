@@ -106,6 +106,8 @@ window.addEventListener('DOMContentLoaded',()=>{
             submitbuton.style.opacity = '1'
         }
         })
+        
     }
 
 })
+

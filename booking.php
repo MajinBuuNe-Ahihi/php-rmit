@@ -9,16 +9,21 @@
 
 <body>
   <?php
-  require_once('./header.php')
+  require_once('./header.php');
   ?>
   <section>
     <div class="main-booking">
-      <form method="post" action="#">
+      <form method="post" action="./appointments.php">
         <table>
           <tr>
             <td>Patient Id</td>
             <td>
-              <input id="pid" type="text" name="pid">
+              <input id="pid" type="text" name="pid" style="border:<?php echo !empty($_GET['pid']) ? '1px solid red' : 'none'
+                                                                    ?> ">
+              <?php if (!empty($_GET['pid'])) {
+                echo ('<br/> <span style="color: red"> Patient Id' . $_GET['pid'] . '<span>');
+              }
+              ?>
             </td>
           </tr>
           <tr>
@@ -26,7 +31,10 @@
               Date
             </td>
             <td>
-              <input type="date" id="date" name="date">
+              <input type="date" id="date" name="date" style="border:<?php echo !empty($_GET['date']) ? '1px solid red' : 'none' ?> ">
+              <?php if (!empty($_GET['date'])) {
+                echo ('<br/><span style="color: red"> Date' . $_GET['date'] . '<span>');
+              } ?>
             </td>
           </tr>
           <tr>
@@ -37,10 +45,15 @@
                 <label class="pillgroup__element">12pm - 3pm</label>
                 <label class="pillgroup__element">3pm - 6pm</label>
               </div>
-              <input type="checkbox" class="checkbox" value="1" name="time[]"> </input>
-              <input type="checkbox" class="checkbox" value="2" name="time[]"> </input>
-              <input type="checkbox" class="checkbox" value="3" name="time[]"> </input>
+              <input type="checkbox" class="checkbox" value="1" name="time" checked> </input>
+              <input type="checkbox" class="checkbox" value="2" name="time"> </input>
+              <input type="checkbox" class="checkbox" value="3" name="time"> </input>
             </td>
+          </tr>
+          <tr>
+            <?php if (!empty($_GET['time'])) {
+              echo ("<br/> <span style='color: red'> Date" . $_GET['time'] . '<span>');
+            } ?>
           </tr>
           <tr>
             <td>Reason</td>
@@ -86,7 +99,6 @@
       </form>
     </div>
   </section>
-
   <script src="./js/index.js"></script>
   <?php
   require_once('./footer.php')

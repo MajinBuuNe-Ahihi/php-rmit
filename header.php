@@ -7,7 +7,7 @@
       <li class="header-navigation__element"><a href="./index.php" class="header-navigation__element__link">HOME</a></li>
       <li class="header-navigation__element"><a href="#about" class="header-navigation__element__link">ABOUT US</a></li>
       <li class="header-navigation__element"><a href="#staff" class="header-navigation__element__link">STAFF PROFILE</a></li>
-      <li class="header-navigation__element"><a href="#" class="header-navigation__element__link">SERVICE</a></li>
+      <li class="header-navigation__element"><a href="./login.php" class="header-navigation__element__link">Login with Admin</a></li>
       <li class="header-navigation__element"><a href="./booking.php" class="header-navigation__element__link">BOOKING</a></li>
     </ul>
   </div>

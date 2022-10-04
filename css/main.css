@@ -703,3 +703,15 @@ td {
     padding: 10px;
   }
 }
+
+#success {
+  margin-top: 100px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+  font-size: 30px;
+  color: #FFD400;
+}
