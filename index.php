@@ -10,10 +10,11 @@
 <body>
   <?php
   require_once('./header.php');
-  $image = array("https://www.state.gov/wp-content/uploads/2019/04/shutterstock_683522173-2560x852.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRumfdpYFTpmQGcySAghooeDxRiY_qgtGRYlx7onbZbEbXnEen1hhWAyUAadibAnI_dQ9E&usqp=CAU",
-    "https://res.cloudinary.com/anhvd/image/upload/v1601234649/4_Countries_Accelerating_health_Tech_Development_700x450_c2b4f084c9.jpg",
-    "https://static.wixstatic.com/media/f2f697363ea78141cb664a2a9c91143f.jpg/v1/fill/w_640,h_480,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/f2f697363ea78141cb664a2a9c91143f.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzVqrVd_jbPXkoPxIWKsvjcBrmsDnwbwxBemZPKOTxuYBmWs-Vg4rj7Q5Ems3_qNntrw8&usqp=CAU");
+  $image = array(
+    "https://wallpapercave.com/wp/wp2968505.jpg", "https://wallpapercave.com/wp/wp2503718.jpg",
+    "https://wallpapercave.com/wp/wp2789220.jpg",
+    "https://wallpapercave.com/wp/wp2469689.jpg",
+    "https://wallpapercave.com/wp/wp2789199.jpg");
   ?>
   <section>
     <div class="main-banner-wrapper">
