@@ -14,24 +14,29 @@
     "https://wallpapercave.com/wp/wp2968505.jpg", "https://wallpapercave.com/wp/wp2503718.jpg",
     "https://wallpapercave.com/wp/wp2789220.jpg",
     "https://wallpapercave.com/wp/wp2469689.jpg",
-    "https://wallpapercave.com/wp/wp2789199.jpg");
+    "https://wallpapercave.com/wp/wp2789199.jpg"
+  );
   ?>
   <section>
     <div class="main-banner-wrapper">
       <section class="splide banner-slider" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
           <ul class="splide__list">
-            <?php 
-            foreach($image as $url){
-                  echo '<li class="splide__slide banner-slide-image" style="background-image: url('.$url.')"></li>';
+            <?php
+            foreach ($image as $url) {
+              echo '<li class="splide__slide banner-slide-image" style="background-image: url(' . $url . ')">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, totam veniam! Magni, ea? Placeat, ullam est aut,
+        impedit reprehenderit deleniti numquam, dolore optio distinctio illo totam animi. Eveniet, necessitatibus illum.</h1>
+      <a href="./booking.php">bookng now</a></li>';
             }
             ?>
           </ul>
         </div>
+        <div class="button">
+          <i class="fa fa-play icon" aria-hidden="true"></i>
+          <i class="fa fa-pause icon" aria-hidden="true"></i>
+        </div>
       </section>
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, totam veniam! Magni, ea? Placeat, ullam est aut,
-        impedit reprehenderit deleniti numquam, dolore optio distinctio illo totam animi. Eveniet, necessitatibus illum.</h1>
-      <a href="./booking.php">bookng now</a>
     </div>
     <div class="main-about-wrapper" id="about">
       <h1 class="main-heading">About</h1>
@@ -134,14 +139,44 @@
   </section>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var splide = new Splide('.splide', {
+      let play = document.querySelector('.fa-play');
+      let pause = document.querySelector('.fa-pause');
+      pause.classList.add('active');
+      let splide = new Splide('.splide', {
         type: 'loop',
         perPage: 1,
         autoplay: true,
-        pagination: false,
-        arrows:false,
+        pagination: true,
+        arrows: false,
       });
       splide.mount();
+
+      play.addEventListener('click', _ => {
+        play.classList.remove('active');
+        pause.classList.add('active');
+        splide.destroy();
+        splide = new Splide('.splide', {
+          type: 'loop',
+          perPage: 1,
+          autoplay: true,
+          pagination: true,
+          arrows: false,
+        });
+        splide.mount();
+      })
+      pause.addEventListener('click', _ => {
+        pause.classList.remove('active');
+        play.classList.add('active');
+        splide.destroy();
+        splide = new Splide('.splide', {
+          type: 'loop',
+          perPage: 1,
+          autoplay: false,
+          pagination: true,
+          arrows: false,
+        });
+        splide.mount();
+      })
     });
   </script>
   <script src="./js/index.js"></script>

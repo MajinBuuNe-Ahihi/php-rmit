@@ -22,7 +22,6 @@ body {
 .banner-slider {
   height: 100%;
   width: 100%;
-  z-index: -1;
   position: absolute;
   left: 0;
   top: 0;
@@ -44,6 +43,40 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  gap: 70px;
+}
+
+.banner-slider .button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+}
+
+.banner-slider .button .icon {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: none;
+}
+
+.banner-slider .button .icon.active {
   display: flex;
 }
 
@@ -183,7 +216,9 @@ section {
   width: 80%;
   word-wrap: break-word;
   font-size: 38px;
-  color: var(--yellow-color);
+  color: black;
+  font-style: oblique;
+  text-shadow: 1px 0px 10px  var(--blue-color);
   line-height: 150%;
 
 }
